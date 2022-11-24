@@ -1,0 +1,351 @@
+
+<!-- https://github.com/rolling-scopes-school/tasks/blob/master/tasks/songbird/songbird-2022q1.md -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./assets/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Chirp and Tweet</title>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="header_wrapper">
+                <div class="header_inner">
+                    <h1 class="logo to_main_btn">Chirp<span class="logo_and">&</span>Tweet</h1>
+                    <section class="nav">
+                        <button class="header_btn to_main_btn ">
+                            <span class="eng">Main</span>
+                            <span class="rus">Главная</span>
+                        </button>
+                        <button class="header_btn to_gallery_btn">
+                            <span class="eng">Gallery</span>
+                            <span class="rus">Галерея</span>
+                        </button>
+                        <button class="header_btn to_quize_btn">
+                            <span class="eng">Quize</span>
+                            <span class="rus">Викторина</span>
+                        </button>
+                        <button class="header_btn to_results_btn">
+                            <span class="eng">Results</span>
+                            <span class="rus">Результаты</span>
+                        </button>
+                        <div class="switch">
+                            <input id="languageToggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+                            <label for="languageToggle"></label>
+                            <span class="on">ru</span>
+                            <span class="off">en</span>
+                        </div>
+                    </section>
+                    <div class="burger">
+                        <img class="burger_img" id="burgerIMG" src="./assets/burger_menu.png" alt="menu">
+                        <div class="burger_close"> ✕ </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <div class="main_wrapper">
+
+                <section class="main">
+                    <div class="promo">
+                        <div class="promo_info">
+                            <p class="eng">Chirp and Tweet - the quiz app for recognizing birds by their voices </p>
+                            <p class="rus">Chirp and Tweet - приложение-викторина для распознавания птиц по их голосам </p>
+                            <img class="promo_info_img" src="./assets/birds.png" alt="birds on tree">
+                        </div>
+                        <div class="promo_buttons">
+                            <div class="to_gallery_promo">
+                                <button class="promo_btn to_gallery_btn">
+                                    <span class="eng">Gallery</span>
+                                    <span class="rus">Галерея</span>
+                                </button>
+                            </div>
+                            <div class="to_quize_promo">
+                                <button class="promo_btn to_quize_btn">
+                                    <span class="eng">Quize</span>
+                                    <span class="rus">Викторина</span>
+                                </button>
+                            </div>
+                            <div class="to_results_promo">
+                                <button class="promo_btn to_results_btn">
+                                    <span class="eng">Results</span>
+                                    <span class="rus">Результаты</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="gallery invisible">
+                    <div class="quize_level">
+                        <ul class="gallery_level_list">
+                            <li class="gallery_level_item gallery_item_active">
+                                <span class="item_text eng">Common</span>
+                                <span class="item_text rus">Разминка</span>
+                                <img class="item_pic" src="./assets/bird_ico/common.png" alt="common birds">
+                            </li>
+                            <li class="gallery_level_item">
+                                <span class="item_text eng">Sparrows</span>
+                                <span class="item_text rus">Воробьиные</span>
+                                <img class="item_pic" src="./assets/bird_ico/passerine.png" alt="common birds">
+                            </li>
+                            <li class="gallery_level_item">
+                                <span class="item_text eng">Birds of the woods</span>
+                                <span class="item_text rus">Лесные птицы</span>
+                                <img class="item_pic" src="./assets/bird_ico/forest.png" alt="common birds">
+                            </li>
+                            <li class="gallery_level_item">
+                                <span class="item_text eng">Songbirds</span>
+                                <span class="item_text rus">Певчие птицы</span>
+                                <img class="item_pic" src="./assets/bird_ico/songbirds.png" alt="common birds">
+                            </li>
+                            <li class="gallery_level_item">
+                                <span class="item_text eng">Birds of prey</span>
+                                <span class="item_text rus">Хищные птицы</span>
+                                <img class="item_pic" src="./assets/bird_ico/predator.png" alt="common birds">
+                            </li>
+                            <li class="gallery_level_item">
+                                <span class="item_text eng">Seabirds</span>
+                                <span class="item_text rus">Морские птицы</span>
+                                <img class="item_pic" src="./assets/bird_ico/sea.png" alt="common birds">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gallery_description"></div>
+                    <img class="gallery_bird" src="./assets/little_bird.png" alt="little bird">
+                </section>
+
+                <section class="quize invisible">
+                    <div class="quize_level">
+                        <ul class="quize_level_list">
+                            <li class="level_item level_item_active">
+                                <span class="item_text eng">Common</span>
+                                <span class="item_text rus">Разминка</span>
+                                <img class="item_pic" src="./assets/bird_ico/common.png" alt="common birds">
+                            </li>
+                            <li class="level_item">
+                                <span class="item_text eng">Sparrows</span>
+                                <span class="item_text rus">Воробьиные</span>
+                                <img class="item_pic" src="./assets/bird_ico/passerine.png" alt="common birds">
+                            </li>
+                            <li class="level_item">
+                                <span class="item_text eng">Birds of the woods</span>
+                                <span class="item_text rus">Лесные птицы</span>
+                                <img class="item_pic" src="./assets/bird_ico/forest.png" alt="common birds">
+                            </li>
+                            <li class="level_item">
+                                <span class="item_text eng">Songbirds</span>
+                                <span class="item_text rus">Певчие птицы</span>
+                                <img class="item_pic" src="./assets/bird_ico/songbirds.png" alt="common birds">
+                            </li>
+                            <li class="level_item">
+                                <span class="item_text eng">Birds of prey</span>
+                                <span class="item_text rus">Хищные птицы</span>
+                                <img class="item_pic" src="./assets/bird_ico/predator.png" alt="common birds">
+                            </li>
+                            <li class="level_item">
+                                <span class="item_text eng">Seabirds</span>
+                                <span class="item_text rus">Морские птицы</span>
+                                <img class="item_pic" src="./assets/bird_ico/sea.png" alt="common birds">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="new_game_wrap">
+                    <button class="start_new_game invisible">
+                        <span class="eng">New game</span>
+                        <span class="rus">Новая игра</span>
+                    </button>
+                </div>
+                    <div class="quize_score">
+                        <span class="score_text eng">Score: </span>
+                        <span class="score_text rus">Счет: </span>
+                        <span class="score_count">0</span>
+                    </div>
+                    <div class="quize_question">
+                        <div class="question_picture">
+                            <img id="birdPicture" class="question_picture_img" src="" alt="bird picture">
+                        </div>
+                        <div class="player">
+                            <span class="question_name question_name_eng eng">? ? ? </span> 
+                            <span class="question_name question_name_rus rus">? ? ? </span>
+                            <audio src="" class="quize_audio" id="audioQuiz"></audio>
+                            <div class="audio_controls">
+                                <div class="audio_btn play_btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                                    </svg>
+                                </div>
+                                <div class="audio_btn pause_btn invisible">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pause-fill" viewBox="0 0 16 16">
+                                        <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                                    </svg>
+                                </div>
+                                <div class="audio_timebar">
+                                    <div class="timebar_point"></div>
+                                    <div class="timebar_main"></div>
+                                    <div class="timebar_time">
+                                        <span class="current_time">0:00</span>
+                                        <span class="full_time">0:00</span>
+                                    </div>
+                                </div>
+                                <div class="audio_btn sound_btn">
+                                    <input type="range" class="volume_rage" min="0" max="1" step="0.1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-volume-up-fill" viewBox="0 0 16 16">
+                                        <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
+                                        <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/>
+                                        <path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question_answers">
+                            <ul class="question_answers_list">
+                                <li class="answers_item">
+                                    <button class="answers_btn"></button>
+                                    <span class="answer_option answer_option_eng eng"></span>
+                                    <span class="answer_option answer_option_rus rus"></span>
+                                </li>
+                                <li class="answers_item">
+                                    <button class="answers_btn"></button>
+                                    <span class="answer_option answer_option_eng eng"></span>
+                                    <span class="answer_option answer_option_rus rus"></span>
+                                </li>
+                                <li class="answers_item">
+                                    <button class="answers_btn"></button>
+                                    <span class="answer_option answer_option_eng eng"></span>
+                                    <span class="answer_option answer_option_rus rus"></span>
+                                </li>
+                                <li class="answers_item">
+                                    <button class="answers_btn"></button>
+                                    <span class="answer_option answer_option_eng eng"></span>
+                                    <span class="answer_option answer_option_rus rus"></span>
+                                </li>
+                                <li class="answers_item">
+                                    <button class="answers_btn"></button>
+                                    <span class="answer_option answer_option_eng eng"></span>
+                                    <span class="answer_option answer_option_rus rus"></span>
+                                </li>
+                                <li class="answers_item">
+                                    <button class="answers_btn"></button>
+                                    <span class="answer_option answer_option_eng eng"></span>
+                                    <span class="answer_option answer_option_rus rus"></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="next_question" disabled> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="describe">
+                        <div class="answer_picture">
+                            <img class="answer_picture_img" src="">
+                        </div>
+                        <div>
+                            <div class="answer_bird_description">
+                                <div>
+                                    <div class="answer_name answer_name_eng eng">Listen to the player. Select bird from list</div>
+                                    <div class="answer_name answer_name_rus rus">Послушайте плеер. Выберите вариант ответа</div>
+                                    <div class="answer_species"></div>
+                                </div>
+                                <figure>
+                                    <audio class="answer_audio invisible"
+                                        controls
+                                        src="">
+                                            <a href="">
+                                                Download audio
+                                            </a>
+                                    </audio>
+                                </figure>
+                            </div>
+                            <div class="answer_description answer_description_rus rus"></div>
+                            <div class="answer_description answer_description_eng eng"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="results invisible">
+                    <img class="result_bird" src="./assets/results1.png" alt="bird picture">
+                    <div class="winners_wrapper">
+                        <table class = 'winners_section'>
+                            <tr class="winners_table_head">
+                                <th>
+                                    <span class="eng">Number</span>
+                                    <span class="rus">Номер</span>
+                                </td>
+                                <th>
+                                    <span class="eng">Name</span>
+                                    <span class="rus">Имя</span>
+                                </td>
+                                <th>
+                                    <span class="eng">Score</span>
+                                    <span class="rus">Счет</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button id="clearStorage" class="clear_local">
+                        <span class="eng">Clear All Results</span>
+                        <span class="rus">Очистить</span>
+                    </button>
+                    <img class="result_bird_2" src="./assets/results2.png" alt="bird picture">
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="wrapper">
+            <div class="footer_info_wrapper">
+                <a href="https://rs.school/js/" class="RSS_logo">RSSchool</a>
+                <a href="https://github.com/4Quark" class="github_logo">GitHub</a>
+                <span>© Rolling Scopes School, 2022</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="myModal" class="modal invisible">
+        <div class="modal-content">
+            <span class="close" id="closeModal">X</span>
+            <h3 class="eng"> Good job! </h3>
+            <h3 class="rus"> Отличная работа! </h3>
+            <span class="eng"> You passed the quiz. Your score </span>
+            <span class="rus"> Вы прошли викторину и набрали </span>
+            <span class="win_score"> 10 </span>
+            <span class="eng"> of 30 possible points </span>
+            <span class="rus"> баллов из 30 возможных. </span>
+            <div class="gamer">
+                <span class="greeting_gamer eng">Enter your name to save result: </span>
+                <span class="greeting_gamer rus">Введите имя, чтобы сохранить результат: </span>
+                <input type="text" class="gamer_input">
+                <button class="save_gamer" id="saveResult"> 
+                    <span class="eng">Save</span>
+                    <span class="rus">Сохранить</span>
+                </button>
+            </div>
+            <div class="new_game_wrap">
+                <button class="new_game">
+                    <span class="eng">New game</span>
+                    <span class="rus">Новая игра</span>
+                </button>
+            </div>
+            <img class="modal_bird" src="./assets/bird_any/win.png" alt="bird paint">
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
